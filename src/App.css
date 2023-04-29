@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Plus Jakarta Sans;
+}
+
+.main {
+  width: 800px;
+  margin: 0 auto;
+
+}
+
+.save-box {
+  display: flex;
+  align-items: center;
+}
+
+.save-box input {
+  border-radius: 8px;
+  border: solid 1px;
+  font-size: 18px;
+
+}
+
+.matrix {
+  width: 200px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 2px;
+  margin: 32px;
+}
+
+.matrix .item {
+  /* width: 24px; */
+  /* height: 24px; */
+  border-radius: 6px;
+  background-color: #d6d6d6;
+}
+
+.matrix .item.active {
+  background-color: #6EDD5C;
+}
+
+.break {
+  width: 100%;
+  margin-top: 8px;
+}
+
+input {
+  padding: 4px 8px 4px 8px;
+}
+
+.btn {
+  padding: 4px 8px 4px 8px;
+  border-radius: 6px;
+  background: #17D9AA;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Plus Jakarta Sans;
+  transition: .1s ease-in-out;
+  margin: 4px;
+}
+
+.btn.blue {
+  background: #478add;
+  color: white;
+}
+
+.btn:active {
+  scale: 1.08;
+}
+
+.dataset {
+  display: flex;
+  flex-direction: column;
+}
+
+.dataset .matrix-items {
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  padding-right: 32px;
+  height: 128px;
+  align-items: center;
+
+}
+
+.dataset .matrix-items .matrix-canvas-item {
+  display: flex;
+  margin: 8px;
+  border: solid 1px rgb(217, 217, 217);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 64px;
+  max-height: 64px;
+  height: auto;
+  transition: all 100ms;
+}
+
+.dataset .matrix-items .matrix-canvas-item:hover {
+  scale: 1.3;
+}
+
+.dataset .matrix-items .matrix-canvas-item {
+  position: relative;
+  /* rotate: 180deg; */
+}
+
+.dataset .matrix-items .matrix-canvas-item .delete {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  background-color: #ebe7e7;
+  padding: 0px 4px 0px 4px;
+  border-radius: 6px;
+  opacity: 0;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(229, 104, 104);
+  opacity: 0;
+}
+
+.dataset .matrix-items .matrix-canvas-item:hover .delete {
+  opacity: .7;
+}
