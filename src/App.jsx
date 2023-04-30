@@ -150,7 +150,7 @@ function App() {
     <>
       <section className="main">
         <h1>
-          Tenserflow.js 8x8 matrix number recognizer
+          Tensorflow.js 8x8 matrix number recognizer
         </h1>
         <span>
           there is few sample of each number in below dataset , just click on train and then, write your number in matrix
